@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jeecms3.0.4"
+  id="myeclipse.1298509753843"
+  context-root="/"
+  j2ee-spec="5.0"
+  archive="jeecms3.0.4.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
