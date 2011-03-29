@@ -9,9 +9,7 @@ import org.springframework.util.Assert;
 
 /**
  * Cookie 辅助类
- * 
  * @author liufang
- * 
  */
 public class CookieUtils {
 	/**
@@ -29,11 +27,8 @@ public class CookieUtils {
 
 	/**
 	 * 获得cookie的每页条数
-	 * 
 	 * 使用_cookie_page_size作为cookie name
-	 * 
-	 * @param request
-	 *            HttpServletRequest
+	 * @param request  HttpServletRequest
 	 * @return default:20 max:200
 	 */
 	public static int getPageSize(HttpServletRequest request) {
@@ -56,11 +51,8 @@ public class CookieUtils {
 
 	/**
 	 * 获得cookie
-	 * 
-	 * @param request
-	 *            HttpServletRequest
-	 * @param name
-	 *            cookie name
+	 * @param request HttpServletRequest
+	 * @param name	  cookie name
 	 * @return if exist return cookie, else return null.
 	 */
 	public static Cookie getCookie(HttpServletRequest request, String name) {
@@ -78,7 +70,6 @@ public class CookieUtils {
 
 	/**
 	 * 根据部署路径，将cookie保存在根目录。
-	 * 
 	 * @param request
 	 * @param response
 	 * @param name
@@ -86,9 +77,7 @@ public class CookieUtils {
 	 * @param expiry
 	 * @return
 	 */
-	public static Cookie addCookie(HttpServletRequest request,
-			HttpServletResponse response, String name, String value,
-			Integer expiry) {
+	public static Cookie addCookie(HttpServletRequest request, HttpServletResponse response, String name, String value, Integer expiry) {
 		Cookie cookie = new Cookie(name, value);
 		if (expiry != null) {
 			cookie.setMaxAge(expiry);
@@ -101,13 +90,11 @@ public class CookieUtils {
 
 	/**
 	 * 取消cookie
-	 * 
 	 * @param response
 	 * @param name
 	 * @param domain
 	 */
-	public static void cancleCookie(HttpServletResponse response, String name,
-			String domain) {
+	public static void cancleCookie(HttpServletResponse response, String name, String domain) {
 		Cookie cookie = new Cookie(name, null);
 		cookie.setMaxAge(0);
 		cookie.setPath("/");
