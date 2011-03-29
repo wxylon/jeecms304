@@ -97,6 +97,6 @@ public class Md5PwdEncoder implements PwdEncoder {
 	
 	public static void main(String[] args){
 		Md5PwdEncoder md5PwdEncoder = new Md5PwdEncoder();
-		System.out.println(md5PwdEncoder.mergePasswordAndSalt("sss","{sss}", true));
+		System.out.println(md5PwdEncoder.encodePassword("ggggg", "ssss"));
 	}
 }
